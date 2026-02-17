@@ -179,3 +179,150 @@ a{color:inherit}
 .links{display:flex; gap:12px; flex-wrap:wrap}
 .links a{text-decoration:none; color:var(--muted)}
 .links a:hover{color:var(--text)}
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Sérénité Quotidienne — Newsletter bien-être</title>
+  <meta name="description" content="Une newsletter bien-être courte et utile : stress, sommeil, habitudes et énergie. 2 minutes, 2 fois par semaine."/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <div class="container">
+    <header class="nav">
+      <a class="brand" href="./">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Sérénité Quotidienne</span>
+      </a>
+      <span class="small">2 emails / semaine • 2 minutes</span>
+    </header>
+
+    <main class="hero">
+      <section>
+        <h1 class="h1">Du bien-être, sans injonctions.</h1>
+        <p class="sub">
+          Des idées simples et actionnables pour mieux respirer, mieux dormir et retrouver de l’énergie.
+          Chaque édition contient : <strong>1 pratique</strong>, <strong>1 mini-défi</strong> et <strong>1 ressource</strong>.
+        </p>
+
+        <div class="badges">
+          <span class="badge">🧘 Stress & apaisement</span>
+          <span class="badge">🌙 Sommeil & récupération</span>
+          <span class="badge">🥗 Habitudes & énergie</span>
+          <span class="badge">🧠 Clarté mentale</span>
+        </div>
+
+        <hr class="divider"/>
+
+        <div class="card">
+          <h2 style="margin:0 0 6px">Recevoir la prochaine édition</h2>
+          <p class="small" style="margin:0 0 10px">
+            Gratuit au départ. Tu peux passer en abonnement premium ensuite (essai 3 jours).
+          </p>
+
+          <!-- OPTION A : formulaire simple (à relier ensuite à un outil d'emailing) -->
+          <form class="form" action="merci.html" method="get">
+            <input name="email" type="email" required placeholder="Ton email (ex : toi@exemple.com)" />
+            <button class="btn" type="submit">Je m’abonne</button>
+          </form>
+          <div class="note">Pas de spam. Désinscription en 1 clic.</div>
+
+          <!-- OPTION B : coller ici l'embed ConvertKit/Kit ou beehiiv -->
+          <!--
+            ✅ Kit/ConvertKit : colle le script d'embed fourni par Kit ici.
+            (Kit explique l'intégration par embed JavaScript.) 
+          -->
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2 style="margin:0 0 10px">Ce que tu vas recevoir</h2>
+
+        <div class="grid">
+          <div class="item">
+            <h3>1 pratique guidée</h3>
+            <p>Respiration, relaxation, micro-méditation (2–5 min).</p>
+          </div>
+          <div class="item">
+            <h3>1 mini-défi</h3>
+            <p>Une action simple à tester pendant 24h.</p>
+          </div>
+          <div class="item">
+            <h3>1 ressource</h3>
+            <p>Podcast, outil, ou lecture courte — utile et concrète.</p>
+          </div>
+        </div>
+
+        <hr class="divider"/>
+
+        <h3 style="margin:0 0 6px">Premium (optionnel)</h3>
+        <p class="small" style="margin:0">
+          Accès aux archives, éditions “deep dive” et routines hebdo.
+          <br/>👉 Essai gratuit 3 jours, puis abonnement mensuel.
+        </p>
+
+        <div style="margin-top:12px">
+          <a class="btn" href="#paiement" style="display:inline-block;text-decoration:none">Découvrir Premium</a>
+        </div>
+      </aside>
+    </main>
+
+    <section id="paiement" class="card" style="margin-top:14px">
+      <h2 style="margin:0 0 8px">Abonnement récurrent + essai 3 jours</h2>
+      <p class="small" style="margin:0">
+        Pour activer un essai avec “empreinte bancaire”, le plus simple est de passer par une plateforme
+        qui gère abonnement + Stripe, ou d’utiliser Stripe Checkout avec un mini backend.
+      </p>
+      <ul class="small" style="margin:10px 0 0">
+        <li><strong>Facile :</strong> beehiiv + Stripe (abonnements et essais gérés). :contentReference[oaicite:3]{index=3}</li>
+        <li><strong>Flexible :</strong> Stripe Checkout “Subscriptions” (nécessite un endpoint serveur pour créer la session). :contentReference[oaicite:4]{index=4}</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> Sérénité Quotidienne</span>
+      <div class="links">
+        <a href="./">Accueil</a>
+        <a href="mailto:contact@tondomaine.com">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Merci — Sérénité Quotidienne</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <a class="brand" href="./">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Sérénité Quotidienne</span>
+      </a>
+      <span class="small">Confirmation</span>
+    </header>
+
+    <main class="card" style="margin-top:18px">
+      <h1 style="margin:0 0 6px">Merci 🌿</h1>
+      <p class="small" style="margin:0">
+        Si tu ne vois rien d’ici quelques minutes, pense à vérifier tes spams.
+      </p>
+
+      <div style="margin-top:14px">
+        <a class="btn" href="./" style="display:inline-block;text-decoration:none">Retour à l’accueil</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
